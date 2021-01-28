@@ -14,6 +14,10 @@ app.use(helmet());
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.redirect("https://wickedcoolkit.com");
+});
+
 app.get("/sticker/:stickerName", async (req, res) => {
   try {
     const stickerName = req.params.stickerName;
